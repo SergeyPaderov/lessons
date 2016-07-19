@@ -1,5 +1,7 @@
 package ru.lesson.lessons;
 
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,8 +15,7 @@ public class FactorialCountTest {
     public void testFactorial() throws Exception {
 
         FactorialCount factorialCount = new FactorialCount();
-        for (int n = 1; n <= 3; n++) {
-            assertThat(factorialCount.factorial(6), is(6));
+
+            assertThat((int) factorialCount.factorial(3), is(6));
         }
-    }
 }
