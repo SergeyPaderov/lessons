@@ -10,9 +10,9 @@ public class QuadraticEquationTest {
     @Test
     public void calcFuncOneValue(){
 
-        QuadraticEquation TestEquation = new QuadraticEquation(1,2,3);
+        QuadraticEquation testEquation = new QuadraticEquation(1,2,3);
         double check = 11;
-        double result = TestEquation.Equation(2);
+        double result = testEquation.equation(2);
         Assert.assertThat(result,is(check));
 
     }

@@ -29,7 +29,7 @@ public class QuadraticEquation {
 		this.c = c;
 	}
 
-	public double Equation(double x){
+	public double equation(double x){
 		return a*x*x+b*x+c;
 	}
 
@@ -43,7 +43,7 @@ public class QuadraticEquation {
 		step = Double.valueOf(args[5]);
 
 		while(x1 < x2){
-			System.out.println(oneMoreQuadraticEquation.Equation(x1));
+			System.out.println(oneMoreQuadraticEquation.equation(x1));
 			x1 += step;
 
 		}
