@@ -12,7 +12,7 @@ public class QuadraticEquationTest {
 
         QuadraticEquation TestEquation = new QuadraticEquation(1,2,3);
         double check = 11;
-        double result = TestEquation.Equation(2);
+        double result = TestEquation.equation(2);
         Assert.assertThat(result,is(check));
 
     }
