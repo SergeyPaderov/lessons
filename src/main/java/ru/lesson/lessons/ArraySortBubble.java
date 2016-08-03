@@ -16,19 +16,14 @@ public class ArraySortBubble {
 
         for (int i = values.length - 1; i >= 2; i--) {
 
-            boolean sorted = true;
-
             for (int j = 0; j < i; j++) {
 
                 if (values[j] > values[j + 1]) {
                     int temp = values[j];
                     values[j] = values[j + 1];
                     values[j + 1] = temp;
-                    sorted = false;
+
                 }
-            }
-            if (sorted) {
-                break;
             }
         }
     }
