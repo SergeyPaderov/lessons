@@ -9,7 +9,7 @@ import static org.hamcrest.core.Is.is;
  * Test for class RotationSquareArray
  *
  * @author SergeyPaderov
- * @since 06.09.2016
+ * @since 06.08.2016
  * @version 1.0
  */
 

@@ -7,7 +7,7 @@ package ru.lesson.lessons;
  *поворачивать данный массив на 90 градусов.
  *
  * @author SergeyPaderov
- * @since 06.09.2016
+ * @since 06.08.2016
  * @version 1.0
  */
 
