@@ -1,7 +1,6 @@
 package ru.lesson.lessons;
 
 import java.util.HashSet;
-import java.io.PrintStream;
 import java.util.Set;
 import java.util.Arrays;
 

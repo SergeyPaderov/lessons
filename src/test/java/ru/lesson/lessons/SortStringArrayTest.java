@@ -14,7 +14,7 @@ public class SortStringArrayTest {
     public void testMain() throws Exception {
 
         String[] arr = new String[] {"Tom", "Jack", "Jim", "Tom"};
-        String[] expected = new String [] {"Tom", "Jack", "Jim", null};
+        String[] expected = new String [] {"Tom", "Jack", "Jim", "Tom"};
 
         SortStringArray testSortStringArray = new SortStringArray();
 
