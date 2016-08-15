@@ -13,12 +13,13 @@ package ru.lesson.lessons;
 
 public class RotationSquareArray {
 
-    public static void main(String[] args) {
+    int m = 3;
 
+    public static void main(String[] args) {
+        int m =3;
         /** Create array */
 
-        int m = 3;
-        int[][] SquareArray = new int[m][m];
+                int[][] SquareArray = new int[m][m];
 
         /** Fill in the cells of the array */
 
@@ -37,8 +38,11 @@ public class RotationSquareArray {
             System.out.print("\n");
         }
         System.out.println();
+    }
 
         /** Rotation */
+
+    public void Rotation(int[][] SquareArray) {
 
         for (int k = 0; k < m / 2; k++) {
             for (int j = k; j < m - 1 - k; j++) {
