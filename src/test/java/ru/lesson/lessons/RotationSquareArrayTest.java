@@ -29,7 +29,7 @@ public class RotationSquareArrayTest {
         /** Create new object RotationSquareArray's type for test */
 
         RotationSquareArray testArrayStestRotation = new RotationSquareArray();
-        testArrayStestRotation.Rotation(arr);
+        testArrayStestRotation.rotation(arr);
         assertArrayEquals(expected, arr);
 
 

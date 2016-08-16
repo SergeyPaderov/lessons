@@ -42,7 +42,7 @@ public class RotationSquareArray {
 
         /** Rotation */
 
-    public void Rotation(int[][] SquareArray) {
+    public void rotation(int[][] SquareArray) {
 
         for (int k = 0; k < m / 2; k++) {
             for (int j = k; j < m - 1 - k; j++) {
