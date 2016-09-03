@@ -41,7 +41,7 @@ public class SortStringArray {
         return finalArray;
     }
 
-    private boolean consistInTempArray(String value, String[] tempArray) {
+    public boolean consistInTempArray(String value, String[] tempArray) {
 
         if (tempArray.length == 0) return false;
 
