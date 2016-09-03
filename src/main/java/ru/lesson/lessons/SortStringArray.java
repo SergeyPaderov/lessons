@@ -1,9 +1,5 @@
 package ru.lesson.lessons;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Arrays;
-
 /**
  *Дано: Массив строк. String[] - нужно убрать дубликаты.
  *
@@ -14,12 +10,56 @@ import java.util.Arrays;
 
 public class SortStringArray {
 
-    public static void main(String[] args) {
+    public String[] removeDuplicates(String[] incomingArray) {
 
-        String[] phoneBook = {"Tom", "Jack", "Jim", "Tom"};
+        String[] tempArray = new String[incomingArray.length];
 
-        Set<String> noteBook = new HashSet<String>(Arrays.asList(phoneBook));
-        String[] result = noteBook.toArray(new String[noteBook.size()]);
+        int lastIndexOfTempArray = 0;
 
+        for (int i = 0; i < incomingArray.length; i++) {
+
+            String currentString = incomingArray[i];
+
+            if (!consistInTempArray(currentString, tempArray)) {
+
+                tempArray[lastIndexOfTempArray] = currentString;
+
+                lastIndexOfTempArray++;
+            }
+        }
+
+        String[] finalArray = new String[lastIndexOfTempArray];
+
+        for (int i = 0; i < tempArray.length; i++) {
+
+            if (tempArray[i] != null) {
+
+                finalArray[i] = tempArray[i];
+            }
+        }
+
+        return finalArray;
+    }
+
+    private boolean consistInTempArray(String value, String[] tempArray) {
+
+        if (tempArray.length == 0) return false;
+
+        for (int i = 0; i < tempArray.length; i++) {
+
+            if (tempArray[i] == null) {
+
+                continue;
+
+            } else {
+
+                if (tempArray[i].equals(value)) {
+
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }
