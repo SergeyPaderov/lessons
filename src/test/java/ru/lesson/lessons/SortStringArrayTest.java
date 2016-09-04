@@ -16,7 +16,7 @@ public class SortStringArrayTest {
 
     @Test
 
-    public void testRemoveDuplicates() throws Exception {
+    public void testEraseDuplicate() throws Exception {
 
         /** Create one array to be tested for equality */
 
@@ -24,33 +24,14 @@ public class SortStringArrayTest {
 
         /** Create the other array to be tested for equality */
 
-        String[] expected = new String[]{"Tom", "Jack", "Jim", "Tom"};
+        String[] expected = new String[]{"Tom", "Jack", "Jim"};
 
         /** Create new object SortStringArray's type for test */
 
         SortStringArray testSortStringArray = new SortStringArray();
 
-        testSortStringArray.removeDuplicates(arr);
+        testSortStringArray.eraseDuplicate(arr);
 
         assertThat(arr, is(expected));
-    }
-
-    public void testConsistInTempArray() throws Exception {
-
-        /** Create one array to be tested for equality */
-
-        String[] arrFirst = new String[]{"Tom", "Jack", "Jim", "Tom"};
-
-        /** Create the other array to be tested for equality */
-
-        String[] arrExpected = new String[]{"Tom", "Jack", "Jim",};
-
-        /** Create new object SortStringArray's type for test */
-
-        SortStringArray testSortStringArray = new SortStringArray();
-
-        testSortStringArray.consistInTempArray();
-
-        assertThat(arrFirst, is(arrExpected));
     }
 }

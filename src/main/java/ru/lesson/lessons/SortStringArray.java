@@ -10,56 +10,37 @@ package ru.lesson.lessons;
 
 public class SortStringArray {
 
-    public String[] removeDuplicates(String[] incomingArray) {
+    /**
+    * Create new array with length of arrayBeforeSort
+     */
 
-        String[] tempArray = new String[incomingArray.length];
+    public String[] eraseDuplicate(String[] arrayBeforeSort){
 
-        int lastIndexOfTempArray = 0;
+        /**
+         * If find duplicate, replace it with last unique element
+         * and decrement elementInTheArray
+         */
 
-        for (int i = 0; i < incomingArray.length; i++) {
+        int elementInTheArray = arrayBeforeSort.length;
 
-            String currentString = incomingArray[i];
-
-            if (!consistInTempArray(currentString, tempArray)) {
-
-                tempArray[lastIndexOfTempArray] = currentString;
-
-                lastIndexOfTempArray++;
-            }
-        }
-
-        String[] finalArray = new String[lastIndexOfTempArray];
-
-        for (int i = 0; i < tempArray.length; i++) {
-
-            if (tempArray[i] != null) {
-
-                finalArray[i] = tempArray[i];
-            }
-        }
-
-        return finalArray;
-    }
-
-    public boolean consistInTempArray(String value, String[] tempArray) {
-
-        if (tempArray.length == 0) return false;
-
-        for (int i = 0; i < tempArray.length; i++) {
-
-            if (tempArray[i] == null) {
-
-                continue;
-
-            } else {
-
-                if (tempArray[i].equals(value)) {
-
-                    return true;
+        for (int i = 0; i < elementInTheArray; i++){
+            for (int j = i + 1; j < elementInTheArray; j++){
+                if (arrayBeforeSort[i].equals(arrayBeforeSort[j])){
+                    arrayBeforeSort[j] = arrayBeforeSort[elementInTheArray - 1];
+                    elementInTheArray--;
+                    j--;
                 }
             }
         }
 
-        return false;
+        /**
+         * Create new array with length of elementInTheArray
+         */
+        String[] arrayAfterSort = new String[elementInTheArray];
+        for (int i = 0; i < elementInTheArray; i++){
+            arrayAfterSort[i] = arrayBeforeSort[i];
+        }
+
+        return arrayAfterSort;
     }
 }
