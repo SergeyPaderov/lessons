@@ -1,20 +1,22 @@
 package ru.lesson.lessons;
 
-import static org.junit.Assert.*;
-import org.junit.Assert;
 import  org.junit.Test;
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.*;
+import org.junit.Assert;
 
 /**
  * @author SergeyPaderov
  * @since 29.08.2016
  * @version 1.0
  */
+
 public class SortStringArrayTest {
 
     /**
      * @throws Exception if result will be not similar to String's array "sorted array" (expected)
      */
+
     @Test
 
     public void testDelete() throws Exception {

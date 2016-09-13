@@ -15,6 +15,7 @@ public class SortStringArray {
      * @param arrayForSort - array of strings with duplicate
      * @return -  array without duplicates
      */
+
     public String[] dublicateErase(String[] arrayForSort) {
 
         for (int i = 0; i < arrayForSort.length - 1; i++) {
@@ -28,6 +29,7 @@ public class SortStringArray {
                         arrayForSort[arrayForSort.length - 1] = null;
                     }
                 }
+
             } else break;
         }
 
