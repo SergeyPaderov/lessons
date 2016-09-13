@@ -11,36 +11,26 @@ package ru.lesson.lessons;
 public class SortStringArray {
 
     /**
-    * Create new array with length of arrayBeforeSort
+     * Method with loops for sort array
+     * @param arrayForSort - array of strings with duplicate
+     * @return -  array without duplicates
      */
+    public String[] dublicateErase(String[] arrayForSort) {
 
-    public String[] eraseDuplicate(String[] arrayBeforeSort){
+        for (int i = 0; i < arrayForSort.length - 1; i++) {
+            if(arrayForSort[i]!= null) {
+                for (int j = i + 1; j < arrayForSort.length; j++) {
 
-        /**
-         * If find duplicate, replace it with last unique element
-         * and decrement elementInTheArray
-         */
-
-        int elementInTheArray = arrayBeforeSort.length;
-
-        for (int i = 0; i < elementInTheArray; i++){
-            for (int j = i + 1; j < elementInTheArray; j++){
-                if (arrayBeforeSort[i].equals(arrayBeforeSort[j])){
-                    arrayBeforeSort[j] = arrayBeforeSort[elementInTheArray - 1];
-                    elementInTheArray--;
-                    j--;
+                    if (arrayForSort[i].equals(arrayForSort[j])) {
+                        for (int k = j; k < arrayForSort.length - 1; k++) {
+                            arrayForSort[k] = arrayForSort[k + 1];
+                        }
+                        arrayForSort[arrayForSort.length - 1] = null;
+                    }
                 }
-            }
+            } else break;
         }
 
-        /**
-         * Create new array with length of elementInTheArray
-         */
-        String[] arrayAfterSort = new String[elementInTheArray];
-        for (int i = 0; i < elementInTheArray; i++){
-            arrayAfterSort[i] = arrayBeforeSort[i];
-        }
-
-        return arrayAfterSort;
+        return arrayForSort;
     }
 }

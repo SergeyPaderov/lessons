@@ -1,11 +1,9 @@
 package ru.lesson.lessons;
 
-import org.junit.Test;
-
-import java.util.Arrays;
-
-import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
+import org.junit.Assert;
+import  org.junit.Test;
+import static org.hamcrest.core.Is.is;
 
 /**
  * @author SergeyPaderov
@@ -14,24 +12,19 @@ import static org.junit.Assert.*;
  */
 public class SortStringArrayTest {
 
+    /**
+     * @throws Exception if result will be not similar to String's array "sorted array" (expected)
+     */
     @Test
 
-    public void testEraseDuplicate() throws Exception {
+    public void testDelete() throws Exception {
 
-        /** Create one array to be tested for equality */
+            SortStringArray duplicates = new SortStringArray();
+            String[] notSortedArray = {"Tom", "Jack", "Tom", "Jim"};
+            String[] sortedArray = {"Tom", "Jack", "Jim",null};
 
-        String[] arr = new String[]{"Tom", "Jack", "Jim", "Tom"};
+            String[] result = duplicates.dublicateErase(notSortedArray);
 
-        /** Create the other array to be tested for equality */
-
-        String[] expected = new String[]{"Tom", "Jack", "Jim"};
-
-        /** Create new object SortStringArray's type for test */
-
-        SortStringArray testSortStringArray = new SortStringArray();
-
-        testSortStringArray.eraseDuplicate(arr);
-
-        assertThat(arr, is(expected));
+            Assert.assertThat(result, is(sortedArray));
+        }
     }
-}
